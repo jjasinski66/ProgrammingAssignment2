@@ -2,7 +2,12 @@
 ## functions do
 
 ## Write a short comment describing this function
-## Testing
+## This function..
+##      1) sets the value of the square matrix
+##      2) gets the value of the matrix
+##      3) Sets the inverse of the matrix
+##      4) gets the inverse of the matrix
+
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
     set <- function(y) {
@@ -19,12 +24,16 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
+##
+## This function checks if the inverse of the matrix has been cached, 
+## if no, it calculates and caches the inverse, 
+## if yes, it retrieves the cached inverse matrix
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+    ## Return a matrix that is the inverse of 'x'
     m <- x$getinv()
     if(!is.null(m)) {
-        message("getting cached data")
+        message("getting cached inverse matrix")
         return(m)
     }
     data <- x$get()
